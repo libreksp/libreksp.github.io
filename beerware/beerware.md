@@ -5,6 +5,7 @@ title: Home
 
 Here is all of the smaller, more "toy-like" projects in The Klondike Software Project. If it is in this category, it is under the KSP-version of the Beerware License. The original beerware license was created by Poul-Henning Kamp and read as follows:
 
+<pre>
 "/*
  * ----------------------------------------------------------------------------
  * "THE BEER-WARE LICENSE" (Revision 42):
@@ -24,6 +25,7 @@ The KSP version of the Beerware License is slightly different, but the permissio
  * this stuff is worth it, you can contribute to The Klondike Software Project.
  * ----------------------------------------------------------------------------
  */"
+ </pre>
 
 To submit a project to be listed here, please submit a GitHub issue until we transition off of GitHub Pages. [Submit a project!](https://github.com/libreksp/libreksp.github.io/issues)
 
