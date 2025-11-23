@@ -1,4 +1,9 @@
-kfib - Basic Fibonacci Sequence Calculator.
+---
+layout: default
+title: Home
+---
+
+## kfib - Basic Fibonacci Sequence Calculator.
 
 Does what it says, nothing more. To be honest, this is just shovelware to get SOMETHING on the Beerware page.
 
@@ -6,7 +11,7 @@ Does what it says, nothing more. To be honest, this is just shovelware to get SO
 Usage: <count>
 ~~~
 
-[Get kfib](https://codeberg.org/KlondikeDev/Beerware/src/branch/main/kfib)
+![Get kfib](https://codeberg.org/KlondikeDev/Beerware/src/branch/main/kfib)
 
 Gallery:
 
