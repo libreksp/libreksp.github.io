@@ -33,4 +33,4 @@ To submit a project to be listed here, please submit a GitHub issue until we tra
 
 Current Beerware Projects:
 
-None yet...
+[kfib - Basic Fibonacci Sequence Calculator](/beerware/kfib/kfib.md)
