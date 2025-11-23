@@ -3,7 +3,7 @@ layout: default
 title: Home
 ---
 
-Here is all of the smaller, more "toy-like" projects in The Klondike Software Project. If it is in this category, it is under the KSP-version of the Beerware License. The original beerware license was created by Poul-Henning Kamp and read as follows:
+Here is all of the smaller, more "toy-like" projects in the Klondike Software Project. If it is in this category, it is under the KSP-version of the Beerware License. The original beerware license was created by Poul-Henning Kamp and read as follows:
 
 ~~~
     "/*
@@ -33,4 +33,4 @@ To submit a project to be listed here, please submit a GitHub issue until we tra
 
 Current Beerware Projects:
 
-[kfib - Basic Fibonacci Sequence Calculator](/beerware/kfib/kfib.md)
+[kfib - Basic Fibonacci Sequence Calculator](/beerware/kfib/kfib.html)
