@@ -21,9 +21,9 @@ The KSP version of the Beerware License is slightly different, but the permissio
 ~~~
     "/*
     * ----------------------------------------------------------------------------
-    * "THE KLONDIKE BEERWARE LICENSE" (Revision 1):
+    * "THE KLONDIKE BEERWARE LICENSE" (Revision 3):
     * <username@example.com> wrote this file. As long as you retain this notice you
-    * can do whatever you want with this stuff. If find this project worth it, 
+    * can do whatever you want with this stuff. If you find this project worth it, 
     * you can contribute to The Klondike Software Project.
     * ----------------------------------------------------------------------------
     */"
