@@ -1,34 +1,81 @@
-# Current Projects
+# Current Projects:
 
-## Klondike License Family
+## Contribute!
+https://codeberg.org/libreksp
 
-## Klondike Software Project Website
+---
 
-## KFS (filesystem)
+## Kunix: A Monolithic Unix-like Kernel and Userland
 
-# Planned Projects
+“Kunix, Codename: Kodiak” is the current version of the Kunix kernel and userland.
 
-### Note: Yes, this is a lot. Eventually, these WILL be delivered. Or, ideally. KSP just got started.
+Kunix is designed to be a **“nucleus”** of Unix systems, with compatibility layers for **most Unix-based systems**, and to be **(near) fully POSIX-compliant.** This is **very** ambitious, but I do believe that over enough time we could be at least mostly Linux and/or BSD-compatible.
 
-### Also, more info on Kunix will be coming soon. Like before Christmas 2025. Doesn't mean anything will be done yet, but a united idea of Kunix WILL be.
+At a later date, we will transition to “Kunix, Codename: Fairbanks,” which will be a semi-microkernel (more info at a later date).
 
-## Core System:
+Right now, Kunix is made by *one* developer, so timelines are rough and development is irregular in pace.
 
-Kunix (microkernel OS)
-Denali-BSD (BSD-based distribution)
+*We haven’t decided on a license yet, which is why Kunix remains closed (for a little while).*
+
+---
+
+### Kunix Status / Roadmap
+
+This is a **very rough estimate.**
+
+Booting with GNU GRUB ✓  
+Interrupt Descriptor Table ✓  
+Formatted Printing ✓  
+Serial Driver ✓  
+RTC and PIC ✓  
+Keyboard Handling ✓  
+Scheduling ✓  
+
+**conch** shell — *(IN PROGRESS – Expected December 2025)*  
+UFS filesystem support — *(IN PROGRESS – Expected February 2026)*  
+Ethernet driver — *(IN PROGRESS – Expected February 2026)*  
+Framebuffer and exiting VGA text mode — *(Expected April 2026)*  
+Syscalls and Ring 3 — *(Expected June 2026 or later)*  
+KFS (Kunix Filesystem) — *(2026–2027)*  
+The rest… *(???)*
+
+---
+
+## Denali Linux
+
+A Linux From Scratch distribution for the Klondike Software Project.
+
+Denali will use the KDE desktop environment, customized for beauty and simplicity.
+
+It will initially use OpenRC and pkgtools.
+
+---
+
+### Planned Features (very early)
+
+Habilis init system  
+Arf package manager  
+Conch for Linux  
+
+---
+
+## The Klondike License Family
+
+Explained here:  
+[Here](/projects/planned/projects.html)
+
+---
+
+## Planned Projects
+
+### Will be done
+kBoot (bootloader)  
+klibc (C library)  
+
+### Hopeful
+Klamath Desktop Environment for Kunix  
+Prime Meridian (Linux compatibility layer for Kunix)  
+Inferno (BSD compatibility layer for Kunix)  
+
+### Maybe someday
 Juneau (firmware)
-BTBOE (bootloader)
-
-
-## Userland:
-
-Klamath Desktop Environment
-arf (package manager)
-habilis (init system)
-conch (shell)
-klibc (C library)
-
-## Compatibility:
-
-Prime Meridian (Linux compatibility layer for Kunix)
-Inferno (BSD compatibility layer for Kunix)
