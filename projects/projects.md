@@ -1,7 +1,6 @@
 # Current Projects:
 
-## Contribute!
-https://codeberg.org/libreksp
+## [Contribute!](https://codeberg.org/libreksp)
 
 ---
 
@@ -47,7 +46,7 @@ A Linux From Scratch distribution for the Klondike Software Project.
 
 Denali will use the KDE desktop environment, customized for beauty and simplicity.
 
-It will initially use OpenRC and pkgtools.
+It will initially use OpenRC, Zsh and pkgtools.
 
 ---
 

@@ -16,4 +16,4 @@ Feel free to contribute to any of our projects, which are currently hosted on Co
 
 Later, we will transition off of GitHub Pages, but this is the most ideal solution for now.
 
-Look at some of our projects [Here](/projects/planned/projects.html)
+Look at some of our projects [Here](/projects/projects.html)
