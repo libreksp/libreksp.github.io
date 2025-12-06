@@ -61,7 +61,7 @@ Conch for Linux
 ## The Klondike License Family
 
 Explained here:  
-[Here](/projects/planned/projects.html)
+[Here](/licenses/licenses.html)
 
 ---
 
