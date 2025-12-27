@@ -8,7 +8,7 @@
 
 “Kunix, Codename: Kodiak” is the current version of the Kunix kernel and userland.
 
-Kunix is designed to be a **“nucleus”** of Unix systems, with compatibility layers for **most Unix-based systems**, and to be **(near) fully POSIX-compliant.** This is **very** ambitious, but I do believe that over enough time we could be at least mostly Linux and/or BSD-compatible.
+Kunix is designed to be a **“nucleus”** of Unix systems, with compatibility layers for **most Unix-based systems**, and to be **fully POSIX-compliant.** This is **very** ambitious, but I do believe that over enough time we could be at least mostly Linux and/or BSD-compatible.
 
 At a later date, we will transition to “Kunix, Codename: Fairbanks,” which will be a semi-microkernel (more info at a later date).
 
@@ -21,21 +21,32 @@ Right now, Kunix is made by *one* developer, so timelines are rough and developm
 ### Kunix Status / Roadmap
 
 This is a **very rough estimate.**
-
 Booting with GNU GRUB ✓  
 Interrupt Descriptor Table ✓  
 Formatted Printing ✓  
 Serial Driver ✓  
 RTC and PIC ✓  
 Keyboard Handling ✓  
-Scheduling ✓  
-
-**conch** shell — *(IN PROGRESS – Expected December 2025)*  
-UFS filesystem support — *(IN PROGRESS – Expected February 2026)*  
-Ethernet driver — *(IN PROGRESS – Expected February 2026)*  
-Framebuffer and exiting VGA text mode — *(Expected April 2026)*  
-Syscalls and Ring 3 — *(Expected June 2026 or later)*  
-KFS (Kunix Filesystem) — *(2026–2027)*  
+Framebuffer ✓  
+Font rendering ✓  
+Pixel rendering ✓  
+Terminal/console — *(IN PROGRESS – Expected December 2025)*  
+ATA disk driver — *(Expected December 2025)*  
+**conch** shell (built-ins) — *(Expected January 2026)*  
+Memory management (paging, heap) — *(Expected January 2026)*  
+Process management — *(Expected February 2026)*  
+Captain Scheduling — *(Expected February 2026)*  
+Syscalls and Ring 3 — *(Expected March 2026)*  
+ELF loader — *(Expected March 2026)*  
+**kfetch** (first userspace program) — *(Expected April 2026)*  
+UFS filesystem support — *(Expected May 2026)*  
+VFS — *(Expected June 2026)*  
+Network driver + TCP/IP stack — *(Expected Summer 2026)*  
+Prime Meridian (Linux compat) — *(Expected late 2026)*  
+Inferno (BSD compat) — *(Expected 2027)*  
+Orchard (macOS compat) — *(2027)*  
+KFS (Kunix Filesystem) — *(2027–2028)*  
+X11/WindowServer — *(2028+)*  
 The rest… *(???)*
 
 ---
