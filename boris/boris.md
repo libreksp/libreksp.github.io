@@ -2,8 +2,7 @@
 
 Boris is the mascot of the Klondike Software Project, and Kunix.
 
-![Boris](/boris/images/boris.png)
-
+<img src="/boris/images/boris.png" alt="Boris" width="250" height="225">
 
 # Boris Artificial Intelligence:
 
@@ -15,7 +14,7 @@ Boris is the mascot of the Klondike Software Project, and Kunix.
 ### Superlight (50M-250M Params)
 
 #### Boris 50M Cubscout
-![boris-50M-cub](/boris/boris-50m/boris-50M.png)
+  <img src="/boris/boris-50m/boris-50M.png" alt="boris-50m" width="440" height="125">
 
 Find on [Hugging Face](https://huggingface.co/KlondikeDev/boris-50M-superlight-cubscout)
 
