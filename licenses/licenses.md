@@ -29,7 +29,7 @@ Network copyleft license. Like KPL, but also requires source code disclosure for
 
 Copyleft license for documentation and written works. Derivatives must preserve freedom, ensuring knowledge remains open.
 
-### Micro Librebook License - **PLANNED**
+### [Micro Librebook License](/licenses/mml.md)
 
 Permissive license for documentation and books. Free to use and modify with attribution, no copyleft requirement.
 
