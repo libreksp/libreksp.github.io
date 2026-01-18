@@ -42,4 +42,4 @@ Copyleft license for visual and audio media. Ensures creative works and derivati
 Permissive license for images, video, and audio. Free to use and remix with attribution, no copyleft requirement.
 
 
-#### The KSP License Family is itself released under the Klondike Commons License v1 - free to use, modify, and distribute.
+#### The KSP License Family is itself released under the Klondike Commons License v2 - free to use, modify, and distribute.
