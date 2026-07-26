@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Klondike Software Project</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="header">
+  <div class="wave"></div>
+  <div id="logo"><span>K</span></div>
+  <h1 id="sitetitle">Klondike Software Project</h1>
+  <div id="headerlink"><a href="get-involved.html">Free as in Freedom &mdash; Get Involved!</a></div>
+</div>
+
+<div id="frame">
+
+  <div id="sidebar">
+    <div class="navhead current"><a href="index.html">Home</a></div>
+    <ul>
+      <li><a href="news.html">News</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="screenshots.html">Screenshots</a></li>
+      <li><a href="get-involved.html">Get Involved</a></li>
+    </ul>
+
+    <div class="navhead">Get Kunix</div>
+    <ul>
+      <li><a href="kmos-images.html">KMOS Images</a></li>
+      <li><a href="source-code.html">Source Code</a></li>
+    </ul>
+
+    <div class="navhead">Projects</div>
+    <ul>
+      <li><a href="kmos.html">KMOS</a></li>
+      <li><a href="https://nmai.kunix.org">NMAI</a></li>
+      <li><a href="licenses.html">Licenses</a></li>
+    </ul>
+
+    <div class="navhead">Documentation</div>
+    <ul>
+      <li><a href="wiki.html">Wiki</a></li>
+      <li><a href="building.html">Building</a></li>
+      <li><a href="faq.html">FAQ</a></li>
+    </ul>
+
+    <div class="navhead">Support</div>
+    <ul>
+      <li><a href="bugs.html">Bugs</a></li>
+      <li><a href="mailing-list.html">Mailing List</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+
+    <div class="navhead">Development</div>
+    <ul>
+      <li><a href="cgit.html">CGit</a></li>
+      <li><a href="commit-history.html">Commit History</a></li>
+      <li><a href="roadmap.html">Roadmap</a></li>
+      <li><a href="resources.html">Resources</a></li>
+    </ul>
+
+  </div>
+
+  <div id="content">
+    <h2>Free. From Scratch.</h2>
+
+    <p>The Klondike Software Project (KSP) is an umbrella libre software initiative
+    building operating systems, artificial intelligence, and tools from first
+    principles. Every line of code is free software, written to be read,
+    understood, and owned by its users.</p>
+
+    <div class="shotwrap">
+      <div class="screenshot">
+        <img src="Kunix-Kodiak-0.02.png" alt="Kunix Kodiak 0.02 booting in QEMU">
+      </div>
+      <a class="shotcaption" href="screenshots.html">More Screenshots</a>
+    </div>
+
+    <h3><span class="rss"></span>Latest News</h3>
+
+    <p class="newsdate">2026.07.14: KMOS development snapshot</p>
+    <p>The road to ring 3 continues. This month's work focuses on the userspace
+    foundation: the ELF loader, the syscall interface, and the scheduler. Key
+    highlights:</p>
+    <ul>
+      <li>kernel: ELF64 loader parses program headers and maps segments</li>
+      <li>kernel: initial syscall interface via <code>syscall</code>/<code>sysret</code></li>
+      <li>sched: round-robin scheduler with per-task kernel stacks</li>
+      <li>fs: FAT32 driver reads long file names and subdirectories</li>
+      <li>shell: new <code>ls</code> and <code>cat</code> commands backed by the FAT32 driver</li>
+      <li>mm: page fault handler reports faulting address and error code</li>
+    </ul>
+
+    <p class="newsdate">2026.06.30: NMAI &mdash; Boris 125M training run planned</p>
+    <p>New Millennium Artificial Intelligence (NMAI) is preparing a ~26B token
+    training run for Boris, a 125M parameter language model, targeting the
+    HellaSwag benchmark. Follow progress at
+    <a href="https://nmai.kunix.org">nmai.kunix.org</a>.</p>
+
+    <h3>Projects at a Glance</h3>
+    <table class="projects">
+      <tr><th>Project</th><th>What it is</th><th>License</th></tr>
+      <tr><td>KMOS</td><td>Monolithic x86_64 kernel in C</td><td>Kunix License</td></tr>
+      <tr><td>NMAI</td><td>Language, image &amp; recognition models</td><td>MediaLibre / KPL</td></tr>
+      <tr><td>Millennium</td><td>Visual novel set in rural Japan, 2000</td><td>MediaLibre</td></tr>
+    </table>
+
+    <p>KSP software is licensed under the Kunix License and the Klondike Public
+    License family. We believe software freedom is not a feature &mdash; it is the
+    point.</p>
+
+    <div id="footer">
+      Copyright &copy; 2025&ndash;2026 Klondike Software Project. Verbatim copying and
+      distribution of this entire page are permitted worldwide, without royalty,
+      in any medium, provided this notice is preserved.
+    </div>
+  </div>
+
+</div>
+
+</body>
+</html>

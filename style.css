@@ -1,0 +1,231 @@
+/* ============ TDE-style classic layout ============ */
+html, body {
+  margin: 0;
+  padding: 0;
+  background: #1b4088;
+  font-family: Georgia, "DejaVu Serif", "Times New Roman", serif;
+  font-size: 15px;
+  color: #000;
+}
+
+/* ---------- Header ---------- */
+#header {
+  position: relative;
+  height: 148px;
+  background: #0c2a66;
+  overflow: hidden;
+}
+/* the light wave sweeping across the header: two offset SVG crests over a
+   faint third one, all bottom-aligned so they read as rolling surf */
+#header .wave {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 72px;
+  background-image:
+    /* front wave: bright gradient fill */
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 72' preserveAspectRatio='none'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='0' y2='1'%3E%3Cstop offset='0' stop-color='%23f2f6fc'/%3E%3Cstop offset='0.45' stop-color='%23cfdcf1'/%3E%3Cstop offset='1' stop-color='%238fa9d6'/%3E%3C/linearGradient%3E%3C/defs%3E%3Cpath d='M0,42 C170,18 330,58 560,44 C790,30 950,60 1200,32 L1200,72 L0,72 Z' fill='url(%23g)'/%3E%3C/svg%3E"),
+    /* middle wave: medium blue, offset crests */
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 72' preserveAspectRatio='none'%3E%3Cpath d='M0,30 C220,56 430,12 660,34 C890,56 1060,16 1200,42 L1200,72 L0,72 Z' fill='%237896cd' fill-opacity='0.75'/%3E%3C/svg%3E"),
+    /* back wave: faint, tallest crests */
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 72' preserveAspectRatio='none'%3E%3Cpath d='M0,20 C160,44 400,4 640,22 C880,40 1020,6 1200,24 L1200,72 L0,72 Z' fill='%235f80bd' fill-opacity='0.45'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+#logo {
+  position: absolute;
+  top: 14px;
+  left: 16px;
+  width: 108px;
+  height: 108px;
+  background: linear-gradient(160deg, #2a56b0 0%, #0e2f74 70%);
+  border: 2px solid #dbe5f4;
+  border-radius: 14px;
+  box-shadow: 0 0 0 3px #071c48, 2px 3px 8px rgba(0,0,0,.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#logo span {
+  font-family: Georgia, serif;
+  font-weight: bold;
+  font-size: 64px;
+  color: #ffffff;
+  text-shadow: 2px 2px 3px #05173d;
+}
+#sitetitle {
+  position: absolute;
+  top: 34px;
+  left: 160px;
+  margin: 0;
+  font-size: 40px;
+  font-weight: bold;
+  color: #ffffff;
+  letter-spacing: 0.5px;
+  text-shadow: 2px 2px 4px #000;
+}
+#headerlink {
+  position: absolute;
+  top: 116px;
+  right: 28px;
+  font-family: Verdana, "DejaVu Sans", sans-serif;
+  font-size: 12px;
+  font-weight: bold;
+}
+#headerlink a { color: #00ee00; text-decoration: none; }
+#headerlink a:hover { text-decoration: underline; }
+
+/* ---------- Two-column body ---------- */
+#frame {
+  display: flex;
+  align-items: stretch;
+  min-height: calc(100vh - 148px);
+}
+
+/* ---------- Sidebar ---------- */
+#sidebar {
+  flex: 0 0 168px;
+  background: #1b4088;
+  padding: 10px 6px 30px 10px;
+  font-family: Verdana, "DejaVu Sans", sans-serif;
+  font-size: 13px;
+}
+#sidebar .navhead {
+  font-family: Georgia, serif;
+  font-style: italic;
+  font-weight: bold;
+  font-size: 16px;
+  color: #ffffff;
+  margin: 14px 0 3px 2px;
+}
+#sidebar .navhead.current {
+  border: 1px solid #cdd9ee;
+  padding: 1px 4px;
+  margin-left: 0;
+}
+#sidebar ul {
+  list-style: none;
+  margin: 0 0 4px 0;
+  padding: 0 0 0 14px;
+}
+#sidebar ul li { margin: 3px 0; }
+#sidebar a {
+  color: #e8eefb;
+  font-weight: bold;
+  text-decoration: none;
+}
+#sidebar a:hover { color: #ffffff; text-decoration: underline; }
+#sidebar a.current { color: #ffffff; text-decoration: underline; }
+
+/* ---------- Content ---------- */
+#content {
+  flex: 1 1 auto;
+  background: #ffffff;
+  padding: 26px 40px 60px 34px;
+  line-height: 1.45;
+  min-width: 0;
+}
+#content h2 {
+  font-size: 19px;
+  margin: 0 0 14px 0;
+}
+#content h3 {
+  font-size: 17px;
+  margin: 26px 0 10px 0;
+}
+#content a { color: #1b3c8c; font-weight: bold; text-decoration: none; }
+#content a:hover { text-decoration: underline; }
+#content ul { margin: 10px 0 18px 22px; padding: 0; }
+#content ul li { margin: 4px 0; }
+
+/* fake "screenshot" of the KMOS kernel shell */
+.shotwrap { text-align: center; margin: 8px 0 26px 0; }
+.screenshot {
+  display: inline-block;
+  max-width: 100%;
+  box-sizing: border-box;
+  text-align: left;
+  background: #000;
+  border: 1px solid #888;
+  box-shadow: 3px 4px 8px rgba(0,0,0,.35);
+  padding: 10px 14px;
+}
+.screenshot img {
+  display: block;
+  width: 700px;
+  max-width: 100%;
+  height: auto;
+}
+.screenshot pre {
+  margin: 0;
+  font-family: "Courier New", monospace;
+  font-size: 12px;
+  line-height: 1.35;
+  color: #c8c8c8;
+}
+.screenshot .ok    { color: #33dd33; }
+.screenshot .info  { color: #66aaff; }
+.screenshot .prompt{ color: #ffffff; }
+.shotcaption {
+  display: block;
+  margin-top: 8px;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.newsdate { font-weight: bold; font-size: 17px; margin: 22px 0 8px 0; }
+.rss {
+  display: inline-block;
+  width: 15px; height: 15px;
+  background: #ff8800;
+  border-radius: 3px;
+  margin-right: 6px;
+  vertical-align: -2px;
+  position: relative;
+}
+.rss::after {
+  content: "";
+  position: absolute;
+  left: 3px; bottom: 3px;
+  width: 4px; height: 4px;
+  background: #fff;
+  border-radius: 50%;
+}
+
+table.projects {
+  border-collapse: collapse;
+  margin: 12px 0 20px 0;
+  font-size: 14px;
+}
+table.projects th, table.projects td {
+  border: 1px solid #9db1d4;
+  padding: 4px 10px;
+  text-align: left;
+}
+table.projects th { background: #dce6f5; }
+
+/* placeholder pages */
+.underconstruction {
+  margin: 30px 0;
+  padding: 14px 18px;
+  border: 1px dashed #9db1d4;
+  background: #eef3fb;
+  font-family: Verdana, "DejaVu Sans", sans-serif;
+  font-size: 13px;
+}
+
+#footer {
+  margin-top: 46px;
+  border-top: 1px solid #c3cfe4;
+  padding-top: 10px;
+  font-size: 12px;
+  color: #444;
+  font-family: Verdana, "DejaVu Sans", sans-serif;
+}
+
+@media (max-width: 720px) {
+  #frame { flex-direction: column; }
+  #sidebar { flex: none; }
+  #sitetitle { font-size: 26px; left: 140px; }
+}
