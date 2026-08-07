@@ -229,3 +229,122 @@ table.projects th { background: #dce6f5; }
   #sidebar { flex: none; }
   #sitetitle { font-size: 26px; left: 140px; }
 }
+
+/* ---------- Unixipithocene countdown (Y2K38) ---------- */
+/* The whole banner is a link to digital-millennium.html, so it has to opt out
+   of the generic #content a styling. */
+a#doomsday {
+  display: block;
+  margin: 0 0 24px 0;
+  padding: 13px 18px 15px 18px;
+  border: 1px solid #9db1d4;
+  background: #eef3fb;
+  color: #000;
+  font-weight: normal;
+  text-decoration: none;
+}
+a#doomsday:hover {
+  background: #e6edf9;
+  border-color: #1b3c8c;
+  text-decoration: none;
+}
+a#doomsday:hover .dd-label { text-decoration: underline; }
+
+.dd-label {
+  font-family: Georgia, "DejaVu Serif", serif;
+  font-weight: bold;
+  font-size: 17px;
+  color: #1b3c8c;
+}
+.dd-when {
+  margin-top: 10px;
+  font-family: Verdana, "DejaVu Sans", sans-serif;
+  font-size: 11px;
+  color: #445066;
+}
+.dd-when code { font-family: "Courier New", monospace; font-size: 11px; }
+
+/* ---------- split-flap clock ---------- */
+.flipclock {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  gap: 13px;
+  margin: 12px 0 0 0;
+}
+.fc-digits { display: flex; gap: 3px; perspective: 300px; }
+.fc-cap {
+  margin-top: 5px;
+  font-family: Verdana, "DejaVu Sans", sans-serif;
+  font-size: 9px;
+  font-weight: bold;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: #56617a;
+  text-align: center;
+}
+
+.fc-digit {
+  position: relative;
+  width: 28px;
+  height: 42px;
+  font-family: "Courier New", monospace;
+  font-size: 27px;
+  background: #0c2a66;
+  border-radius: 3px;
+  box-shadow: 0 1px 2px rgba(0,0,0,.45);
+}
+/* each <i> is a half-height window onto a full-height glyph, so the two
+   halves of a card line up across the seam */
+.fc-digit i {
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 21px;
+  overflow: hidden;
+  font-style: normal;
+  box-sizing: border-box;
+}
+.fc-digit b {
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 42px;
+  line-height: 42px;
+  text-align: center;
+  font-weight: bold;
+  color: #f2f6fc;
+}
+.fc-up {
+  top: 0;
+  background: #17356e;
+  border-radius: 3px 3px 0 0;
+  border-bottom: 1px solid #05173d;
+}
+.fc-up b { top: 0; }
+.fc-dn {
+  bottom: 0;
+  background: #102a58;
+  border-radius: 0 0 3px 3px;
+}
+.fc-dn b { top: -21px; }
+
+/* the two leaves that actually animate; they sit above the static halves */
+.fc-fold { z-index: 2; backface-visibility: hidden; }
+.fc-fup { transform-origin: 50% 100%; }
+.fc-fdn { transform-origin: 50% 0%; transform: rotateX(90deg); }
+.fc-flipping .fc-fup { animation: fcFoldUp .22s ease-in forwards; }
+.fc-flipping .fc-fdn { animation: fcFoldDn .22s .22s ease-out forwards; }
+@keyframes fcFoldUp { from { transform: rotateX(0deg);  } to { transform: rotateX(-90deg); } }
+@keyframes fcFoldDn { from { transform: rotateX(90deg); } to { transform: rotateX(0deg);   } }
+
+@media (prefers-reduced-motion: reduce) {
+  .fc-flipping .fc-fup, .fc-flipping .fc-fdn { animation: none; }
+}
+@media (max-width: 720px) {
+  .flipclock { gap: 9px; }
+  .fc-digit { width: 22px; height: 34px; font-size: 21px; }
+  .fc-digit i { height: 17px; }
+  .fc-digit b { height: 34px; line-height: 34px; }
+  .fc-dn b { top: -17px; }
+}
