@@ -348,3 +348,169 @@ a#doomsday:hover .dd-label { text-decoration: underline; }
   .fc-digit b { height: 34px; line-height: 34px; }
   .fc-dn b { top: -17px; }
 }
+
+/* ---------- Digital Millennium: manifesto ---------- */
+.lede {
+  font-size: 17px;
+  line-height: 1.5;
+}
+.footnotes {
+  margin-top: 34px;
+  padding-top: 10px;
+  border-top: 1px solid #c3cfe4;
+  font-size: 12.5px;
+  color: #444;
+}
+.footnotes p { margin: 7px 0; }
+sup.fn { font-size: 10px; vertical-align: super; font-weight: bold; }
+
+/* ---------- Digital Millennium: epochs ---------- */
+/* Each epoch carries its own pair of card colours so the six read as a
+   progression rather than six copies of the same clock. */
+.epoch {
+  margin: 0 0 22px 0;
+  padding: 13px 18px 16px 18px;
+  border: 1px solid #c3cfe4;
+  border-left: 6px solid #1b3c8c;
+  background: #f6f8fd;
+}
+.epoch h3 {
+  margin: 0 0 3px 0;
+  font-size: 19px;
+  color: #1b3c8c;
+}
+.epoch h3 .ep-num {
+  font-style: italic;
+  font-weight: normal;
+  opacity: .65;
+  margin-right: 5px;
+}
+.ep-range {
+  margin: 0 0 9px 0;
+  font-family: "Courier New", monospace;
+  font-size: 12.5px;
+  color: #333;
+}
+.ep-desc { margin: 0 0 4px 0; }
+.ep-until {
+  margin: 9px 0 0 0;
+  font-family: Verdana, "DejaVu Sans", sans-serif;
+  font-size: 11px;
+  color: #56617a;
+}
+.ep-now {
+  display: inline-block;
+  margin-left: 8px;
+  padding: 1px 7px;
+  border-radius: 9px;
+  background: #1b3c8c;
+  color: #fff;
+  font-family: Verdana, "DejaVu Sans", sans-serif;
+  font-size: 9px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  vertical-align: 3px;
+}
+
+.ep-1 { border-left-color: #2a56b0; }
+.ep-2 { border-left-color: #10545c; }
+.ep-3 { border-left-color: #245c36; }
+.ep-4 { border-left-color: #6d5210; }
+.ep-5 { border-left-color: #7a3c1e; }
+.ep-6 { border-left-color: #4a2e6b; }
+
+.ep-1 h3 { color: #1b3c8c; }
+.ep-2 h3 { color: #0d5760; }
+.ep-3 h3 { color: #1f5c33; }
+.ep-4 h3 { color: #6b5210; }
+.ep-5 h3 { color: #7a3c1e; }
+.ep-6 h3 { color: #4a2e6b; }
+
+.ep-2 .fc-up { background: #10545c; }
+.ep-2 .fc-dn { background: #0b3c42; }
+.ep-2 .fc-digit { background: #0b3c42; }
+.ep-3 .fc-up { background: #245c36; }
+.ep-3 .fc-dn { background: #194227; }
+.ep-3 .fc-digit { background: #194227; }
+.ep-4 .fc-up { background: #6d5210; }
+.ep-4 .fc-dn { background: #4e3a0b; }
+.ep-4 .fc-digit { background: #4e3a0b; }
+.ep-5 .fc-up { background: #7a3c1e; }
+.ep-5 .fc-dn { background: #582b15; }
+.ep-5 .fc-digit { background: #582b15; }
+.ep-6 .fc-up { background: #4a2e6b; }
+.ep-6 .fc-dn { background: #35204d; }
+.ep-6 .fc-digit { background: #35204d; }
+
+/* ---------- Digital Millennium: timeline ---------- */
+.tl { margin: 16px 0 8px 0; }
+.tl-act {
+  margin: 26px 0 12px 0;
+  font-family: Georgia, "DejaVu Serif", serif;
+  font-style: italic;
+  font-weight: bold;
+  font-size: 17px;
+  color: #1b3c8c;
+}
+.tl-act:first-child { margin-top: 6px; }
+.tl-item {
+  position: relative;
+  margin: 0;
+  padding: 0 0 15px 20px;
+  border-left: 2px solid #c3cfe4;
+  margin-left: 78px;
+}
+.tl-item:last-child { border-left-color: transparent; }
+.tl-date {
+  position: absolute;
+  left: -78px;
+  top: 0;
+  width: 68px;
+  text-align: right;
+  font-family: "Courier New", monospace;
+  font-size: 12.5px;
+  font-weight: bold;
+  color: #444;
+}
+/* the dot on the rule */
+.tl-item::before {
+  content: "";
+  position: absolute;
+  left: -6px;
+  top: 4px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #1b3c8c;
+  border: 2px solid #f6f8fd;
+}
+.tl-item .tl-h {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 2px;
+}
+.tl-item p { margin: 0; font-size: 14px; }
+.tl-loss::before  { background: #8c2f2f; }
+.tl-gain::before  { background: #2f7040; }
+
+.tl-key {
+  margin: 14px 0 0 0;
+  font-family: Verdana, "DejaVu Sans", sans-serif;
+  font-size: 11px;
+  color: #56617a;
+}
+.tl-key .sw {
+  display: inline-block;
+  width: 8px; height: 8px;
+  border-radius: 50%;
+  margin: 0 4px 0 12px;
+  vertical-align: 0;
+}
+.tl-key .sw:first-child { margin-left: 0; }
+
+@media (max-width: 720px) {
+  .tl-item { margin-left: 0; padding-left: 16px; }
+  .tl-date { position: static; display: block; width: auto; text-align: left; margin-bottom: 2px; }
+  .tl-item::before { top: 6px; }
+}

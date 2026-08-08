@@ -67,17 +67,364 @@
   </div>
 
   <div id="content">
-    <h2>Digital Millennium</h2>
+    <h2>The Digital Millennium</h2>
 
-    <div class="underconstruction">
-      <strong>Under construction.</strong> This page has not been written yet.
-      Check back soon, or head <a href="index.html">back to the front page</a>.
+    <p class="lede">The Third Millennium was supposed to belong to everyone. It
+    was going to be bright, glassy and open &mdash; a thousand years of machines
+    that served the people holding them. Twenty-six years in, most of the
+    computers on Earth run code their owners are not permitted to read, on
+    silicon that boots a processor they cannot switch off, under a law that
+    makes looking a crime. This page is about how that happened, how long we
+    have to fix it, and what "fixing it" would even mean.</p>
+
+    <h3>The Argument</h3>
+
+    <p>Since the beginning of the Anthropocene<sup class="fn">1</sup>, one trait
+    has separated our genus from everything else that has lived: the refusal to
+    accept the world as issued. <em>Homo erectus</em> divided labour.
+    <em>Homo neanderthalensis</em> buried their dead. <em>Homo sapiens</em>
+    walked on the Moon, split the atom, and taught sand to do arithmetic. No
+    obstacle has ever held permanently. That is a genuine achievement and it
+    deserves to be said plainly.</p>
+
+    <p>It is also the seed of the problem. Capability breeds confidence,
+    confidence breeds arrogance, arrogance breeds the conviction that one's own
+    judgement need not be checked by anybody. A species that cannot be stopped
+    from outside is eventually only ever stopped from inside &mdash; and the
+    mechanism it uses to stop itself is division.</p>
+
+    <p>We stand near the start of the Third Millennium holding the most
+    remarkable tools ever built. We have coaxed something resembling thought out
+    of silicon and matrix multiplication. We have bent computation around
+    quantum mechanics to search spaces faster than counting allows. And we have
+    arranged, almost without discussing it, for nearly every one of those tools
+    to be opaque to the person using it.</p>
+
+    <p>This is the part that should trouble you. Opacity is not a minor defect
+    in a tool; it is a transfer of authority. A machine you cannot inspect is a
+    machine whose loyalties are asserted rather than demonstrated. You are asked
+    to accept, on the vendor's word, that it does what it claims and nothing
+    else. Trust of that kind is not trust. It is deference with better
+    marketing.</p>
+
+    <p><strong>Why should you trust what you cannot audit?</strong> And if we
+    cannot establish what our own instruments are doing, on what exactly do we
+    propose to build the next nine hundred and seventy-three years?</p>
+
+    <p>The Digital Millennium is not lost. It is enclosed. The distinction
+    matters, because enclosure is reversible and loss is not.</p>
+
+    <h3>The Epochs</h3>
+
+    <p>The millennium divides naturally along the points where our timekeeping
+    breaks. These are not arbitrary: each boundary is a real limit in a real
+    format, a place where a number we chose decades ago runs out of room. They
+    are the metronome of the age. Each clock below counts down to the failure
+    that ends its epoch.</p>
+
+    <div class="epoch ep-1">
+      <h3><span class="ep-num">I</span>Unixipithocene<span class="ep-now">You are here</span></h3>
+      <p class="ep-range">2000.01.01 00:00:00 UTC &rarr; 2038.01.19 03:14:07 UTC</p>
+      <p class="ep-desc">From the opening of the Digital Millennium to the end of
+      32-bit Unix time. The age we are living in, and the one still running on a
+      counter chosen when the machines it addressed filled a room. At
+      03:14:07 on 19 January 2038 a signed 32-bit <code>time_t</code> reaches
+      2,147,483,647 and the next second reads as December 1901.</p>
+      <div class="flipclock" data-end="2038-01-19T03:14:07Z" data-days="4"></div>
+      <p class="ep-until">until signed 32-bit <code>time_t</code> overflows</p>
     </div>
 
-    <p>At <strong>2038.01.19 03:14:07 UTC</strong> a signed 32-bit
-    <code>time_t</code> reaches <code>2147483647</code> and has nowhere left to
-    go. The following second is <code>-2147483648</code>, which reads as
-    1901.12.13 20:45:52 UTC.</p>
+    <div class="epoch ep-2">
+      <h3><span class="ep-num">II</span>Postunixocene</h3>
+      <p class="ep-range">2038.01.19 03:14:08 UTC &rarr; 2038.11.20 23:59:42 UTC</p>
+      <p class="ep-desc">The shortest epoch by an enormous margin: ten months.
+      From the death of 32-bit Unix time to the third rollover of the GPS
+      10-bit week number, which counts to 1023 and then begins again. It has
+      happened twice already &mdash; in 1999 and in 2019 &mdash; and both times
+      receivers that had not been updated silently reported the wrong date.<sup class="fn">2</sup></p>
+      <div class="flipclock" data-end="2038-11-20T23:59:42Z" data-days="4"></div>
+      <p class="ep-until">until the third 10-bit GPS week rollover</p>
+    </div>
+
+    <div class="epoch ep-3">
+      <h3><span class="ep-num">III</span>Allocationcene</h3>
+      <p class="ep-range">2038.11.20 23:59:43 UTC &rarr; 2107.12.31 23:59:58 UTC</p>
+      <p class="ep-desc">Sixty-nine years named for the habit that defines them:
+      deciding how many bits a thing deserves. It ends when the FAT filesystem
+      runs out of calendar. FAT stores the year in seven bits counting from
+      1980, which reaches 2107, and stores seconds in two-second steps &mdash;
+      so the last moment any FAT-formatted volume can represent is 23:59:58 on
+      the final day of that year.</p>
+      <div class="flipclock" data-end="2107-12-31T23:59:58Z" data-days="5"></div>
+      <p class="ep-until">until the FAT 7-bit year field is exhausted</p>
+    </div>
+
+    <div class="epoch ep-4">
+      <h3><span class="ep-num">IV</span>Nanocene</h3>
+      <p class="ep-range">2107.12.31 23:59:59 UTC &rarr; 2262.04.11 23:47:16.854775807 UTC</p>
+      <p class="ep-desc">A century and a half measured in billionths. Counting
+      nanoseconds since 1970 in a signed 64-bit integer buys 292 years and
+      change, and not one second more. Anyone who has met the outer limit of a
+      pandas timestamp has already touched the far wall of this epoch.</p>
+      <div class="flipclock" data-end="2262-04-11T23:47:16Z" data-days="5"></div>
+      <p class="ep-until">until signed 64-bit nanoseconds overflow</p>
+    </div>
+
+    <div class="epoch ep-5">
+      <h3><span class="ep-num">V</span>Exanocene</h3>
+      <p class="ep-range">2262.04.11 23:47:16.854775808 UTC &rarr; 2554.07.21 23:34:33.709551615 UTC</p>
+      <p class="ep-desc">Reclaiming the sign bit doubles the runway and buys
+      another 292 years &mdash; the same arithmetic, one bit richer. Nearly three
+      centuries bought by giving up the ability to express a moment before 1970.
+      Every fix in this list is a trade of that shape.</p>
+      <div class="flipclock" data-end="2554-07-21T23:34:33Z" data-days="6"></div>
+      <p class="ep-until">until unsigned 64-bit nanoseconds overflow</p>
+    </div>
+
+    <div class="epoch ep-6">
+      <h3><span class="ep-num">VI</span>Tacitocene</h3>
+      <p class="ep-range">2554.07.21 23:34:33.709551616 UTC &rarr; 2999.12.31 23:59:59 UTC</p>
+      <p class="ep-desc">Four and a half centuries with no scheduled failure in
+      them &mdash; the silent epoch, and the longest. Nothing we have currently
+      built is due to break here. That is either the most reassuring line on this
+      page or the most ominous one, depending on whether you think the absence of
+      a known deadline means the work is finished. It ends only when the
+      millennium does.</p>
+      <div class="flipclock" data-end="2999-12-31T23:59:59Z" data-days="6"></div>
+      <p class="ep-until">until the close of the Third Millennium</p>
+    </div>
+
+    <h3>A Timeline of the Millennium</h3>
+
+    <p>The story of the Digital Millennium is not a decline. It is a promise, an
+    enclosure, and an unfinished recovery &mdash; three movements that overlap
+    and are still running concurrently.</p>
+
+    <p class="tl-key">
+      <span class="sw" style="background:#8c2f2f"></span>enclosure
+      <span class="sw" style="background:#2f7040"></span>recovery
+      <span class="sw" style="background:#1b3c8c"></span>context
+    </p>
+
+    <div class="tl">
+
+      <div class="tl-act">Act I &mdash; The Promise</div>
+
+      <div class="tl-item tl-gain">
+        <span class="tl-date">1991</span>
+        <span class="tl-h">A kernel, posted to Usenet</span>
+        <p>"Just a hobby, won't be big and professional." The proof that
+        infrastructure could be built in the open by people who would never
+        meet.</p>
+      </div>
+
+      <div class="tl-item tl-gain">
+        <span class="tl-date">1999</span>
+        <span class="tl-h">LinuxBIOS begins</span>
+        <p>Later renamed coreboot. The first serious argument that the firmware
+        beneath the operating system should also belong to the owner.</p>
+      </div>
+
+      <div class="tl-item">
+        <span class="tl-date">2000.01.01</span>
+        <span class="tl-h">The Digital Millennium opens</span>
+        <p>Y2K passes without catastrophe &mdash; not by luck, but because a
+        very large number of people spent years auditing code. A demonstration,
+        immediately forgotten, that inspectable systems can be repaired.</p>
+      </div>
+
+      <div class="tl-item">
+        <span class="tl-date">c. 2000</span>
+        <span class="tl-h">Frutiger Aero</span>
+        <p>Gloss, water, skies, glass, green grass behind clean chrome. Named
+        only in hindsight, but it encoded a real belief: that computing was
+        heading somewhere bright, humane and shared. The aesthetic outlived the
+        belief.</p>
+      </div>
+
+      <div class="tl-act">Act II &mdash; The Enclosure</div>
+
+      <div class="tl-item tl-loss">
+        <span class="tl-date">1998.10.28</span>
+        <span class="tl-h">The DMCA is signed</span>
+        <p>The millennium was enclosed fourteen months before it began. Section
+        1201 makes circumventing an access control unlawful <em>in itself</em>,
+        severed from whether the underlying use was lawful. Reading your own
+        device becomes an offence not because of what you do with what you learn,
+        but because you looked. Every three years the Librarian of Congress
+        grants temporary permission to perform specific acts of curiosity.</p>
+      </div>
+
+      <div class="tl-item tl-loss">
+        <span class="tl-date">2005</span>
+        <span class="tl-h">The Sony BMG rootkit</span>
+        <p>A major label ships software that hides itself on customer machines to
+        enforce copy protection, and weakens those machines in the process.
+        Copyright enforcement is established as a legitimate reason to conceal
+        code from the person running it.</p>
+      </div>
+
+      <div class="tl-item tl-loss">
+        <span class="tl-date">2006.06</span>
+        <span class="tl-h">The Intel Management Engine arrives</span>
+        <p>A separate processor on the die with its own firmware, its own memory
+        access and its own network path, running before the main CPU starts and
+        continuing while the machine is nominally off. Not auditable, not
+        removable, not optional.</p>
+      </div>
+
+      <div class="tl-item tl-loss">
+        <span class="tl-date">2006</span>
+        <span class="tl-h">Dual_EC_DRBG is standardised</span>
+        <p>NIST SP 800-90A blesses a random number generator with a structure
+        that permits whoever chose its constants to predict its output. It is the
+        default in RSA's BSAFE library for nine years. NIST withdraws it in 2014,
+        eight years after publishing it.</p>
+      </div>
+
+      <div class="tl-item tl-loss">
+        <span class="tl-date">2006</span>
+        <span class="tl-h">Room 641A</span>
+        <p>A technician's disclosure describes a splitter cabinet in a San
+        Francisco switching centre, copying backbone traffic wholesale. Not a
+        targeted warrant &mdash; a mirror.</p>
+      </div>
+
+      <div class="tl-item tl-loss">
+        <span class="tl-date">2009</span>
+        <span class="tl-h">"Ring &minus;3" enters the vocabulary</span>
+        <p>Researchers demonstrate the Management Engine as an execution
+        environment beneath every privilege level the owner can reach. The rings
+        run deeper than the architecture manual admits: &minus;1 for the
+        hypervisor, &minus;2 for system management mode, &minus;3 for the
+        coprocessor answering to somebody else.</p>
+      </div>
+
+      <div class="tl-item tl-loss">
+        <span class="tl-date">2012</span>
+        <span class="tl-h">Secure Boot becomes a requirement</span>
+        <p>A genuinely good mechanism &mdash; cryptographic verification of the
+        boot chain &mdash; shipped with the keys held by the vendor rather than
+        the owner. The technology is sound. The custody is the problem, and the
+        two are persistently conflated.</p>
+      </div>
+
+      <div class="tl-item tl-loss">
+        <span class="tl-date">2013</span>
+        <span class="tl-h">AMD ships the Platform Security Processor</span>
+        <p>An ARM TrustZone core placed on the die, with the same posture as
+        Intel's. The last mainstream alternative closes. There is now no
+        high-performance consumer CPU whose owner controls everything executing
+        on it.</p>
+      </div>
+
+      <div class="tl-item tl-loss">
+        <span class="tl-date">2013.06</span>
+        <span class="tl-h">BULLRUN</span>
+        <p>Disclosures reveal a sustained programme to weaken the cryptographic
+        standards everyone else was told to rely on. The damage is not any single
+        intercept; it is that "follow the published standard" stopped being
+        sufficient advice.</p>
+      </div>
+
+      <div class="tl-act">Act III &mdash; The Restoration</div>
+
+      <div class="tl-item tl-gain">
+        <span class="tl-date">2010</span>
+        <span class="tl-h">RISC-V</span>
+        <p>An instruction set architecture nobody owns. Not a product &mdash; a
+        removal of the assumption that the foundation must be somebody's
+        property.</p>
+      </div>
+
+      <div class="tl-item tl-gain">
+        <span class="tl-date">2013</span>
+        <span class="tl-h">Libreboot</span>
+        <p>coreboot with the remaining binary blobs stripped out, on the machines
+        where that is achievable. A small list of models, honestly stated, that
+        boot on code you can read end to end.</p>
+      </div>
+
+      <div class="tl-item tl-gain">
+        <span class="tl-date">2016</span>
+        <span class="tl-h">me_cleaner</span>
+        <p>A tool that strips the Management Engine firmware to the minimum the
+        hardware will tolerate. The following year an undocumented "High
+        Assurance Platform" bit is found that disables most of it &mdash; a
+        capability that existed all along, for customers who were considered to
+        merit it.</p>
+      </div>
+
+      <div class="tl-item tl-gain">
+        <span class="tl-date">2018</span>
+        <span class="tl-h">Owner-controlled silicon ships</span>
+        <p>POWER9 workstations with auditable boot firmware and no equivalent
+        coprocessor. Expensive, niche, and proof that the closed arrangement was
+        a choice rather than a physical necessity.</p>
+      </div>
+
+      <div class="tl-item tl-gain">
+        <span class="tl-date">2024</span>
+        <span class="tl-h">Repair returns to law</span>
+        <p>Right-to-repair legislation begins reversing, piecemeal, the principle
+        that buying a device does not entitle you to understand it.</p>
+      </div>
+
+      <div class="tl-item tl-gain">
+        <span class="tl-date">Now</span>
+        <span class="tl-h">This project</span>
+        <p>An operating system written from scratch, and language models trained
+        and published with every token count and failed run disclosed. Small
+        contributions, deliberately. The argument is not that
+        <a href="kmos.html">KMOS</a> or <a href="https://oc.kunix.org">OpenCerebral</a>
+        will displace anything. It is that the alternative has to exist, be
+        readable, and be built in the open by somebody &mdash; and that the
+        somebody may as well be us.</p>
+      </div>
+
+      <div class="tl-item">
+        <span class="tl-date">2038.01.19</span>
+        <span class="tl-h">The Unixipithocene ends</span>
+        <p>The clock at the top of this site is counting to it.</p>
+      </div>
+
+    </div>
+
+    <h3>What Restoration Requires</h3>
+
+    <p>Not nostalgia. The Frutiger Aero millennium was mostly an aesthetic, and
+    the freedom it implied was never actually delivered &mdash; the enclosure was
+    already law before the gloss arrived. There is no earlier state to return
+    to.</p>
+
+    <p>What is owed is narrower and harder: that a person who buys a computer be
+    permitted to know what it is doing. That verification be possible rather than
+    promised. That no processor in a machine answer to somebody other than its
+    owner. That examining a device you possess not be an offence. Every one of
+    those is achievable with technology that already exists, and every one of
+    them is currently obstructed by a decision somebody made and could
+    unmake.</p>
+
+    <p>Nine hundred and seventy-three years remain. The clocks above are not a
+    countdown to doom; they are a reminder that these systems were designed by
+    people with limited foresight, and are therefore still ours to redesign. The
+    Digital Millennium is enclosed, not lost.</p>
+
+    <div class="footnotes">
+      <p><sup class="fn">1</sup> "Anthropocene" denotes the period in which the
+      genus <em>Homo</em> has had a measurable effect on the Earth itself &mdash;
+      megafaunal extinction, deforestation, and everything since.</p>
+      <p><sup class="fn">2</sup> The GPS rollover is quoted here as
+      2038.11.20 23:59:42 UTC. The week counter rolls at the start of
+      2038.11.21 in <em>GPS</em> time, which falls on the previous day in UTC
+      because GPS runs ahead by the accumulated leap seconds &mdash; 18 at
+      present. In 2022 the CGPM resolved to stop inserting leap seconds by 2035,
+      so that offset is expected to be frozen at 18 by the time this arrives. If
+      it is not, the moment shifts by the difference.</p>
+      <p><sup class="fn">3</sup> This page dates the Third Millennium from
+      2000.01.01 rather than the strictly correct 2001.01.01. The Digital
+      Millennium is reckoned from the rollover that mattered to the machines.</p>
+    </div>
 
     <div id="footer">
       Copyright &copy; 2025&ndash;2026 Klondike Software Project. Verbatim copying and
@@ -87,6 +434,8 @@
   </div>
 
 </div>
+
+<script src="clock.js"></script>
 
 </body>
 </html>

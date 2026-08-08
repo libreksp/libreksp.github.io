@@ -70,38 +70,7 @@
 
     <a id="doomsday" href="digital-millennium.html">
       <span class="dd-label">The Unixipithocene ends at&hellip;</span>
-      <div class="flipclock" id="y2k38">
-        <div class="fc-unit">
-          <div class="fc-digits">
-            <span class="fc-digit"><i class="fc-up"><b>0</b></i><i class="fc-dn"><b>0</b></i><i class="fc-up fc-fold fc-fup"><b>0</b></i><i class="fc-dn fc-fold fc-fdn"><b>0</b></i></span>
-            <span class="fc-digit"><i class="fc-up"><b>0</b></i><i class="fc-dn"><b>0</b></i><i class="fc-up fc-fold fc-fup"><b>0</b></i><i class="fc-dn fc-fold fc-fdn"><b>0</b></i></span>
-            <span class="fc-digit"><i class="fc-up"><b>0</b></i><i class="fc-dn"><b>0</b></i><i class="fc-up fc-fold fc-fup"><b>0</b></i><i class="fc-dn fc-fold fc-fdn"><b>0</b></i></span>
-            <span class="fc-digit"><i class="fc-up"><b>0</b></i><i class="fc-dn"><b>0</b></i><i class="fc-up fc-fold fc-fup"><b>0</b></i><i class="fc-dn fc-fold fc-fdn"><b>0</b></i></span>
-          </div>
-          <div class="fc-cap">Days</div>
-        </div>
-        <div class="fc-unit">
-          <div class="fc-digits">
-            <span class="fc-digit"><i class="fc-up"><b>0</b></i><i class="fc-dn"><b>0</b></i><i class="fc-up fc-fold fc-fup"><b>0</b></i><i class="fc-dn fc-fold fc-fdn"><b>0</b></i></span>
-            <span class="fc-digit"><i class="fc-up"><b>0</b></i><i class="fc-dn"><b>0</b></i><i class="fc-up fc-fold fc-fup"><b>0</b></i><i class="fc-dn fc-fold fc-fdn"><b>0</b></i></span>
-          </div>
-          <div class="fc-cap">Hours</div>
-        </div>
-        <div class="fc-unit">
-          <div class="fc-digits">
-            <span class="fc-digit"><i class="fc-up"><b>0</b></i><i class="fc-dn"><b>0</b></i><i class="fc-up fc-fold fc-fup"><b>0</b></i><i class="fc-dn fc-fold fc-fdn"><b>0</b></i></span>
-            <span class="fc-digit"><i class="fc-up"><b>0</b></i><i class="fc-dn"><b>0</b></i><i class="fc-up fc-fold fc-fup"><b>0</b></i><i class="fc-dn fc-fold fc-fdn"><b>0</b></i></span>
-          </div>
-          <div class="fc-cap">Minutes</div>
-        </div>
-        <div class="fc-unit">
-          <div class="fc-digits">
-            <span class="fc-digit"><i class="fc-up"><b>0</b></i><i class="fc-dn"><b>0</b></i><i class="fc-up fc-fold fc-fup"><b>0</b></i><i class="fc-dn fc-fold fc-fdn"><b>0</b></i></span>
-            <span class="fc-digit"><i class="fc-up"><b>0</b></i><i class="fc-dn"><b>0</b></i><i class="fc-up fc-fold fc-fup"><b>0</b></i><i class="fc-dn fc-fold fc-fdn"><b>0</b></i></span>
-          </div>
-          <div class="fc-cap">Seconds</div>
-        </div>
-      </div>
+      <div class="flipclock" data-end="2038-01-19T03:14:07Z" data-days="4"></div>
       <div class="dd-when">
         <strong>1970.01.01 00:00:00 UTC &ndash; 2038.01.19 03:14:07 UTC.</strong>
         The last second a signed 32-bit <code>time_t</code> can count is
@@ -167,78 +136,7 @@
 
 </div>
 
-<script>
-/* Countdown to the signed 32-bit time_t overflow: 2038-01-19 03:14:07 UTC.
-   Each digit is a split-flap card: two static halves plus two leaves that
-   fold over them when the value changes. */
-(function () {
-  var END = Date.UTC(2038, 0, 19, 3, 14, 7);   /* 2147483647 */
-  var root = document.getElementById('y2k38');
-  if (!root) { return; }
-
-  var cards = root.getElementsByClassName('fc-digit');
-  var reduce = window.matchMedia &&
-               window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  var first = true;
-
-  function setDigit(card, ch) {
-    if (card.getAttribute('data-v') === ch) { return; }
-    var was = card.getAttribute('data-v');
-    var b = card.getElementsByTagName('b');   /* up, dn, foldUp, foldDn */
-    card.setAttribute('data-v', ch);
-
-    if (first || reduce || was === null) {
-      b[0].firstChild.nodeValue = ch;
-      b[1].firstChild.nodeValue = ch;
-      b[2].firstChild.nodeValue = ch;
-      b[3].firstChild.nodeValue = ch;
-      return;
-    }
-
-    b[0].firstChild.nodeValue = ch;    /* static top    -> incoming value */
-    b[1].firstChild.nodeValue = was;   /* static bottom -> outgoing value */
-    b[2].firstChild.nodeValue = was;   /* leaf folding down and away */
-    b[3].firstChild.nodeValue = ch;    /* leaf folding in from above */
-
-    card.classList.remove('fc-flipping');
-    void card.offsetWidth;             /* reflow, so the animation restarts */
-    card.classList.add('fc-flipping');
-
-    window.setTimeout(function () {
-      /* Both leaves snap back to their resting transforms when the class
-         comes off, so they have to be carrying the current value first or
-         the top leaf flashes the digit we just flipped away from. */
-      var now = card.getAttribute('data-v');
-      b[1].firstChild.nodeValue = now;
-      b[2].firstChild.nodeValue = now;
-      b[3].firstChild.nodeValue = now;
-      card.classList.remove('fc-flipping');
-    }, 460);
-  }
-
-  function pad(n, width) {
-    var s = String(n);
-    while (s.length < width) { s = '0' + s; }
-    return s;
-  }
-
-  function tick() {
-    var left = END - Date.now();
-    if (left < 0) { left = 0; }
-    var t = Math.floor(left / 1000);
-    var str = pad(Math.floor(t / 86400), 4) +
-              pad(Math.floor(t % 86400 / 3600), 2) +
-              pad(Math.floor(t % 3600 / 60), 2) +
-              pad(t % 60, 2);
-    var n = Math.min(cards.length, str.length);
-    for (var i = 0; i < n; i++) { setDigit(cards[i], str.charAt(i)); }
-    first = false;
-  }
-
-  tick();
-  window.setInterval(tick, 250);
-}());
-</script>
+<script src="clock.js"></script>
 
 </body>
 </html>
